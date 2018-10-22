@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Upload Utility</title>
+  <meta charset="utf-8">
+  {% load staticfiles %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+<body>
+
+<div class="form">
+  <form method="post" id="download-form" action="download/">
+    {% csrf_token %}
+         <h1>SpellChecker</h1>
+        <h1>Click to download the corrected file</h1>
+        
+      <button type="submit" value="send" class="button button-block">Download</button>
+  </form>
+  <form method="post" id="download-form" action="/Spellcheck/">
+    {% csrf_token %}
+    <button type="submit" value="send" class="button button-block">Back</button>
+     </form>
+</div>
+
+</body>
+</html>
+
