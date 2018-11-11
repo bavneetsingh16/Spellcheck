@@ -13,16 +13,21 @@
 <body>
 
 <div class="form">
+  {% csrf_token %}
   <form method="post" id="download-form" action="download/">
-    {% csrf_token %}
+    
          <h1>SpellChecker</h1>
         <h1>Click to download the corrected file</h1>
         
       <button type="submit" value="send" class="button button-block">Download</button>
   </form>
   <form method="post" id="download-form" action="/Spellcheck/">
-    {% csrf_token %}
-    <button type="submit" value="send" class="button button-block">Back</button>
+    
+    <button name="login" type="submit" value="send" class="button button-block">Back</button>
+     </form>
+     <form method="get" id="download-form" action="/Spellcheck/">
+    
+    <button name="login" type="submit" value="signup" class="button button-block">Logout</button>
      </form>
 </div>
 

@@ -22,7 +22,12 @@
         <input type="file" name="file"></input>
        </div>
       <button type="submit" value="send" class="button button-block">Upload</button>
-  </form>
+      </form>
+      <form method="get" id="download-form" action="/Spellcheck/">
+    {% csrf_token %}
+    <button name="login" type="submit" value="signup" class="button button-block">Logout</button>
+     </form>
+  
 </div>
 
 </body>
